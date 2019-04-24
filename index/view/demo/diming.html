@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-878633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-878633-1');
+</script>
+
+<meta charset="gbk" />
+<meta name="robots" content="all" />
+<meta name="author" content="w3school.com.cn" />
+<link rel="stylesheet" type="text/css" href="/c5.css" />
+<link rel="icon" type="image/png" sizes="16x16" href="/ui2019/w3_16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/ui2019/w3_32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/ui2019/logo-48-red.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/ui2019/logo-96-red.png">
+<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/ui2017/logo-180.png">
+
+
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+</script>
+
+</head>
+
+<body class="browserscripting">
+
+<div><a href=""><button>全部</button></a></div>
+<div class="mydiv">
+
+{volist name="data" id="vo"}
+	<span><span id="{$vo.areaid}">{$vo.areaname}</span></span>	
+{/volist}
+
+</div>
+
+
+
+
+
+
+</script>
+
+
+
+<script>
+$(document).ready(function(ob){
+  	$(".mydiv span").on('click',function(){
+	  	var id = $(this).attr("id");
+	  	var str = "http://192.168.0.109/index/demo/area?name="+id
+	    $.get(str,function(data,status){
+		    
+		    //data = JSON.parse(data);
+		    data = data.replace("\"","");
+		    $(".mydiv").html(data)
+    });
+});
+$(".mydiv").on('click','.asd',function(){
+  		var id = $(this).attr("id");
+  		var str = "http://192.168.0.109/index/demo/area?name="+id
+  		//alert("asd");
+    	$.get(str,function(data,status){
+      		
+      		//data = JSON.parse(data);
+      		data = data.replace("\"","");
+      		$(".mydiv").html(data)
+    	});
+  	});
+});
+</script>
+<!-- <script>
+$(document).ready(function(){
+	$("button").click(function(){
+		$.get("/try/ajax/demo_test.php",function(data,status)15838083147{
+			alert("数据: " + data + "\n状态: " + status);
+		});
+	});
+});
+</script> -->
+
+</body>
+</html>

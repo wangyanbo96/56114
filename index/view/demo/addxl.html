@@ -1,0 +1,67 @@
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+
+<form action="{:url('addxl1')}">
+	开始<input type="" name="sta">
+	结束 <input type="" name="end">
+	公司 <input type="" name="gs">
+	<input type="submit" name="">
+</form>
+
+
+
+
+<div><a href=""><button>全部</button></a></div>
+
+<select name="province" onchange="getCity()">
+{volist name="data" id="vo"}
+	<span id="{$vo.areaid}">{$vo.areaname}</span>	
+	<option value="{$vo.areaid}">{$vo.areaname}</option>
+                          
+
+{/volist}
+</select>
+
+
+
+<div class="mydiv">
+<select name="province" onchange="getCity()">
+{volist name="data" id="vo"}
+	<span id="{$vo.areaid}">{$vo.areaname}</span>	
+	<option value="{$vo.areaid}">{$vo.areaname}</option>
+                          
+
+{/volist}
+</select>
+
+</div>
+
+<div class="mydiv1">
+
+
+</div>
+
+<script>
+	$(document).ready(function(ob){
+	  	$(".mydiv span").on('click',function(){
+		  	var id = $(this).attr("id");
+		  	var str = "http://tp.cc/index/demo/area1?name="+id
+		    $.get(str,function(data,status){
+			    //alert("数据: " + data + "\n状态: " + status);
+			    //data = JSON.parse(data);
+			    //data = data.replace("\"","");
+			    $(".mydiv").html(data)
+	    });
+	});
+	$(".mydiv").on('click','.asd',function(){
+	  		var id = $(this).attr("id");
+	  		var str = "http://tp.cc/index/demo/area1?name="+id
+	  		//alert("asd");
+	    	$.get(str,function(data,status){
+	      		//alert("数据: " + data + "\n状态: " + status);
+	      		//data = JSON.parse(data);
+	      		//data = data.replace("\"","");
+	      		$(".mydiv1").html(data)
+	    	});
+	  	});
+	});
+</script>

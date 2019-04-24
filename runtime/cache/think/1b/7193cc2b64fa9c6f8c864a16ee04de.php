@@ -1,0 +1,4 @@
+<?php
+//000000000060
+ exit();?>
+a:10:{i:0;a:3:{s:6:"areaid";i:1;s:8:"areaname";s:9:"北京shi";s:8:"parentId";i:4744;}i:1;a:3:{s:6:"areaid";i:2;s:8:"areaname";s:6:"上海";s:8:"parentId";i:4744;}i:2;a:3:{s:6:"areaid";i:3;s:8:"areaname";s:6:"天津";s:8:"parentId";i:4744;}i:3;a:3:{s:6:"areaid";i:4;s:8:"areaname";s:6:"重庆";s:8:"parentId";i:4744;}i:4;a:3:{s:6:"areaid";i:5;s:8:"areaname";s:6:"河北";s:8:"parentId";i:4744;}i:5;a:3:{s:6:"areaid";i:6;s:8:"areaname";s:6:"山西";s:8:"parentId";i:4744;}i:6;a:3:{s:6:"areaid";i:7;s:8:"areaname";s:6:"河南";s:8:"parentId";i:4744;}i:7;a:3:{s:6:"areaid";i:8;s:8:"areaname";s:6:"辽宁";s:8:"parentId";i:4744;}i:8;a:3:{s:6:"areaid";i:9;s:8:"areaname";s:6:"吉林";s:8:"parentId";i:4744;}i:9;a:3:{s:6:"areaid";i:10;s:8:"areaname";s:9:"黑龙江";s:8:"parentId";i:4744;}}
